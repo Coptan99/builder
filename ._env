@@ -38,10 +38,10 @@ REPOS_JSON="repos.json"
 RELEASE_OUT_DIR="out/target/product/$DEVICE"
 
 # Optional: If you have any pre command to run before setting up source
-# PRE_SETUP_SOURCE_COMMAND=""
+# PRE_SETUP_SOURCE_COMMAND="mkdir $ROM_NAME; cd $ROM_NAME"
 
 # Required:
-SETUP_SOURCE_COMMAND="https://github.com/Evolution-X/manifest"
+SETUP_SOURCE_COMMAND="repo init -u https://github.com/Evolution-X/manifest -b udc"
 
 # Optional: If you have any post command to run after setting up source
 # POST_SETUP_SOURCE_COMMAND=""
