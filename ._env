@@ -41,7 +41,7 @@ RELEASE_OUT_DIR="out/target/product/$DEVICE"
 # PRE_SETUP_SOURCE_COMMAND="mkdir $ROM_NAME; cd $ROM_NAME"
 
 # Required:
-SETUP_SOURCE_COMMAND="repo init -u https://github.com/Evolution-X/manifest -b udc"
+SETUP_SOURCE_COMMAND="repo init -u https://github.com/Evolution-X/manifest -b udc --depth 1"
 
 # Optional: If you have any post command to run after setting up source
 # POST_SETUP_SOURCE_COMMAND=""
