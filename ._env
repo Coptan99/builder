@@ -1,11 +1,11 @@
 # Required: Device codename
-DEVICE="vince"
-ROM_NAME="RiceDroid"
+DEVICE="lavender"
+ROM_NAME="Evolution-X"
 
 # Required: git username
-GIT_NAME="ROMBUILDER"
+GIT_NAME="Coptan99"
 # Required: git email
-GIT_EMAIL="rom-builder@rest.eu.org"
+GIT_EMAIL="omarcoptan9@gmail.com"
 
 # Required: Personal Access Token from GitHub with permissions repo, admin:repo_hook, user
 # Better set it as a secret in your GitHub repo settings
@@ -15,7 +15,7 @@ GIT_EMAIL="rom-builder@rest.eu.org"
 GITHUB_RELEASE_REPO="rom-builder/$DEVICE-$ROM_NAME"
 
 # Required: To upload the build, set this
-RELEASE_FILES_PATTERN="*.zip|*.md5sum|*.sha256sum"
+RELEASE_FILES_PATTERN="*.zip|*.json|*.md5sum|*.sha256sum"
 
 # Required: Repos to clone
 # Example repos.json:
@@ -41,7 +41,7 @@ RELEASE_OUT_DIR="out/target/product/$DEVICE"
 # PRE_SETUP_SOURCE_COMMAND=""
 
 # Required:
-SETUP_SOURCE_COMMAND=""
+SETUP_SOURCE_COMMAND="https://github.com/Evolution-X/manifest"
 
 # Optional: If you have any post command to run after setting up source
 # POST_SETUP_SOURCE_COMMAND=""
@@ -50,7 +50,7 @@ SETUP_SOURCE_COMMAND=""
 # PRE_SYNC_SOURCE_COMMAND=""
 
 # Required:
-SYNC_SOURCE_COMMAND=""
+SYNC_SOURCE_COMMAND="repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags"
 
 # Optional: If you have any post command to run after syncing source
 # POST_SYNC_SOURCE_COMMAND=""
@@ -61,10 +61,10 @@ SYNC_SOURCE_COMMAND=""
 # Required: Build command either for vanilla or gapps or both
 
 # Vanilla build command
-BUILD_VANILLA_COMMAND="bash vanilla.sh || . build/envsetup.sh && brunch $DEVICE"
+# BUILD_VANILLA_COMMAND="bash vanilla.sh || . build/envsetup.sh && brunch $DEVICE"
 
 # GApps build command
-BUILD_GAPPS_COMMAND=""
+BUILD_GAPPS_COMMAND=". build/envsetup.sh && brunch $DEVICE"
 
 # Optional: If you have any post command to run after building
 # POST_BUILD_COMMAND=""
@@ -77,7 +77,7 @@ BUILD_GAPPS_COMMAND=""
 # TG_CHAT="" # Your chat id
 
 # Optional: if you want to remove OTA Package
-REMOVE_OTA_PACKAGE=true
+# REMOVE_OTA_PACKAGE=true
 
 # Optional: if you want to upload to sourceforge
 SF_UPLOAD=false
